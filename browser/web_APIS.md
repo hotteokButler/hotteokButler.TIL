@@ -2,8 +2,6 @@
 
 ## 1. APIs(<u>Application Programming Interfaces</u>)
 
----
-
 <br/>
 
 ### 1-1. WEB APIs
@@ -15,8 +13,6 @@
   <br/>
 
 ## 2. http & https
-
----
 
 <br/>
 
@@ -33,8 +29,6 @@
   <br/>
 
 ## 3. window(global object)구조
-
----
 
 <br/>
 
@@ -60,8 +54,6 @@
 
 ## 4. browser Coordinates(좌표)
 
----
-
 > 좌표는 기본적으로 x축(가로축) / y축(세로축)으로 이루어져있고, 좌측 상단이 (0,0)좌표 (기준좌표임)! <br/>
 > (내려가고 오른쪽으로 갈수록 숫자가 커진다)
 
@@ -86,9 +78,18 @@
   <br/>
   <br/>
 
-## 5. 더 알아두면 좋은 APIs
+### 4-4. 마우스 좌표 컨트롤 응용
 
----
+: 마우스좌표 x , y 값 -1~1사의 값으로 초기화 하는법 (정 중앙 좌표를 (0,0)으로 초기화)
+
+```javascript
+window.addEventListener('mousemove', (event) => {
+  mousePos.x = -1 + (event.clientX / window.innerWidth) * 2;
+  mousePos.y = 1 - (event.clientY / window.innerHeight) * 2;
+});
+```
+
+## 5. 더 알아두면 좋은 APIs
 
 <br/>
 
@@ -106,8 +107,6 @@ elemet.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
   <br/>
 
 ## 6. Script async와 defer 차이점
-
----
 
 <br/>
 
@@ -144,8 +143,6 @@ elemet.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
 
 ## 7. window load
 
----
-
 <br/>
 
 - window.addEventListner(’load’ , ( ) => { }) <br/>
@@ -158,3 +155,9 @@ elemet.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
   : 사용자가 페이지를 나갈 때 그 나가기 전에 불려지는 함수 (before unload)
 - window.addEventListner(’unload’ , ( ) => { }) <br/>
   : 페이지에 리소스들이 다 unloead될때 불러지는 함수 (resource is being unloaded)
+
+## 8. 참고 사이트
+
+[mdn] https://developer.mozilla.org/en-US/
+
+real 공식은 ecam!

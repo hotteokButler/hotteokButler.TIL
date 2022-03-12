@@ -12,10 +12,12 @@ export default class Calculator {
     });
 
     this.pads.addEventListener('mousedown', (event) => {
-      this.onPadStyle(event);
+      const target = event.target;
+      this.onPadStyle(target);
     });
     this.pads.addEventListener('mouseup', (event) => {
-      this.offPadStyle(event);
+      const target = event.target;
+      this.offPadStyle(target);
     });
   }
 
@@ -32,16 +34,14 @@ export default class Calculator {
     }
   }
 
-  onPadStyle(event) {
-    const target = event.target;
+  onPadStyle(target) {
     if (target.classList.contains('calculator__number')) {
       target.classList.add('calculator__number--onClick');
     } else if (target.classList.contains('calculator__operator')) {
       target.classList.add('calculator__operator--onClick');
     }
   }
-  offPadStyle(event) {
-    const target = event.target;
+  offPadStyle(target) {
     if (target.classList.contains('calculator__number--onClick')) {
       target.classList.remove('calculator__number--onClick');
     } else if (target.classList.contains('calculator__operator--onClick')) {

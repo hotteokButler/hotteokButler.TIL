@@ -49,10 +49,6 @@ TIL
  ├- css
  ├- JavaScript
  ├- react
- ├- mini_project
- |   ├- mini_project01_withJs
- |   ├-
- |   ⌊_
  |
  ⌊_ /추후 추가 예정
 

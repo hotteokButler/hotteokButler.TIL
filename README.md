@@ -6,7 +6,7 @@
 
 1. TIL을 통한 꾸준한 성장!🙋‍♀️
 2. 지치지 않는 개발에 대한 나의 열정을 보여주고싶어서!👩‍💻
-3. 공부한 코드에 대한 예제 활용 (/micro_project/\*)📄
+3. 공부한 코드에 대한 예제 활용 (/mini_project/\*)📄
 
 ## 목표
 
@@ -23,6 +23,7 @@
 - 포미아 : https://poiemaweb.com/
 - JS INFO : https://ko.javascript.info/
 - MDN : https://developer.mozilla.org/ko/
+- mini_projects
 
 **2nd** 실시간 모니터링 시스템 만들기
 
@@ -48,8 +49,8 @@ TIL
  ├- css
  ├- JavaScript
  ├- react
- ├- micro_project
- |   ├- micro_project01_withJs
+ ├- mini_project
+ |   ├- mini_project01_withJs
  |   ├-
  |   ⌊_
  |

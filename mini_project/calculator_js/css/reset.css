@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+body,
+button,
+input {
+  color: #222;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+img,
+button,
+input {
+  vertical-align: top;
+}
+button,
+input {
+  border-style: none;
+  outline: none;
+  background-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+fieldset {
+  border: 0;
+}
+ul {
+  list-style: none;
+}
+address {
+  font-style: normal;
+}
+.hide {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}

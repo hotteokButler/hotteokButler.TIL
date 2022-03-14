@@ -112,6 +112,7 @@ endless();
     2.Event Loop가 계속해서 돌면서 콜스택과 태스크큐를 체크 후 콜스텍의 일들이 비워질때까지 기다렸다가 콜스텍이 비워져 엔진이 아무런 일을 하지 않는 경우에 이벤트 루프에 있는 콜백을 콜스택으로 호출하며 실행된다
 
   - 즉, 이벤트 루프는: 프로세스가 동작하는 동안 루프를 순회하면서 콜 스텍이 비워져있다면 태스크 큐에 들어있는 콜백 하나를 콜스택으로 가져와서 자바스크립트 엔진이 수행할 수 있도록 도와준다.(테스크 큐에있는 콜백은 한번에 하나만 콜 스택으로 가져올 수 있다.)
+    <br>
     ❖ 참고 : [https://developer.mozilla.org/ko/docs/Web/JavaScript/EventLoop](https://developer.mozilla.org/ko/docs/Web/JavaScript/EventLoop)
 
 <br/>

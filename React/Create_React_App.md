@@ -1,12 +1,12 @@
 # Create React App
 
-# 1. Create React App
+<br>
 
 > 참고 사이트 : [https://create-react-app.dev/docs/getting-started/](https://create-react-app.dev/docs/getting-started/)
 
 <br>
 
-## 1-1. 실행 순서
+## 1. 실행 순서
 
 <br>
 
@@ -32,7 +32,7 @@
 <br>
 <br>
 
-## 1-2. 생성된 폴더 구성
+## 2. 생성된 폴더 구성
 
 <br>
 
@@ -55,15 +55,16 @@
 
 6.  public : 사용자들에게 배포할때 외부적으로 보여지는 대표적인것들이 들어있음, 정적인 file을 담아두는 곳,
 
-사용자가 한번에 받아서 컨텐츠가 변하지 않는 것들(static)
+    사용자가 한번에 받아서 컨텐츠가 변하지 않는 것들(static)
 
-        → manifest.json : PWA(프로그래시브 웹 어플리케이션)을 만들때 , 즉 모바일에서 저장하는 웹어플리케이션을 만들때 필요
+        → manifest.json : PWA(프로그래시브 웹 어플리케이션)을 만들때,
+         즉 모바일에서 저장하는 웹어플리케이션을 만들때 필요
         → robots.txt : 웹 크롤링을 위해서 이용됨
 
 7.  src : 핵심 소스코드 , 동적으로 변하는 컨텐츠(dynamic)
 
-            → index.js : 최상위 루트
-            → components : 공통적으로 사용하는 컴포넌트들을 해당 폴더를 만들어서 관리 (따로 추가해야함~)
+        → index.js : 최상위 루트
+        → components : 공통적으로 사용하는 컴포넌트들을 해당 폴더를 만들어서 관리 (따로 추가해야함~)
 
     <br>
     <br>

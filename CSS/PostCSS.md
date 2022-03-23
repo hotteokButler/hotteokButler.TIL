@@ -13,4 +13,4 @@
 - 아직까지도 많은 사람들이 사용하고 있다.
 - 모듈화가 가능
 
-file명에 `**filename.module.css`\*\* 로 지정해서 import해서 쓰면된다 ( javaScript에서 module import하듯이 쓰면됨!)
+file명에 `**filename.module.css**` 로 지정해서 import해서 쓰면된다 ( javaScript에서 module import하듯이 쓰면됨!)

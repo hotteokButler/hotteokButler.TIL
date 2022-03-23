@@ -7,7 +7,14 @@
 
 : 리액트에서 제공하는 Component라는 클래스를 extends, 상속해서 만들 수 있다.
 
+⇒ **리액트에서 컴포넌트를 만들려면 React.Component 클래스를 상속하고, 데이터는 꼭 this.state에 담아 두고, render() 함수에 HTML과 같은 JSX 문법을 이용해서 데이터를 어떻게 UI로 표기 할건지 정의를 해놓도록 만들기! 이것이 리액트 라이브러리에서 정해진 규칙**
+
+- `render()` : UI가 어떻게 표기될것인지 정의
+- `this.state` : object형태로 data 저장
+
 ⇒ component가 state가 있고, 그 상태에 따라서 컴포넌트가 주기적으로 업데이트 되어야할때 씀
+
+⇒클래스의 멤버 변수를 직접 적으로 수정하지 않는한 멤버 변수는 한번 만들어 지면 계속 그 값이 유지
 
 ```jsx
 //Component
@@ -94,7 +101,14 @@ export default LikeButton;
 
 : 간단하게 함수로 만들 수 있다.
 
-⇒ 상태가 없고, 항상 정적으로 데이터가 표기가 된다면 function component 사용
+⇒함수형 컴포넌트는 this를 사용하지 않아도되고, 변수로 선언할 수 있다
+
+⇒ 컴포넌트 자체에 데이터(State)가 없는 경우, **외부에서 전달받은 데이터(Props)만 보여주면 될때도 function Component 사용 즉,** 상태가 없고, 항상 정적으로 데이터가 표기가 된다면 function component 사용
+
+(state를 보관하거나, lifecycle를 사용하고자한다면 react hook 사용)
+
+⇒ 함수의 특성상, 함수를 호출할때마다 코드블럭 전체가 다시 실행, 그리고 선언한 모든 로컬 변수들또한 함수의 실행 컨텍스트 안에서 재정의 값의 재할당이 이루어짐 <br>
+(이러한 이유로 state를 보관해서 일관적으로 사용자에게 보여줄 수 있는 방법이 없어 자체적인 state를 가질 수 없다)
 
 ```jsx
 // 함수는 한가지의 일을 수행하는 작은 단위, state나 라이프사이클 메서드가 없다.
@@ -135,3 +149,11 @@ const Input = memo((props) => {
 ```
 
 3. `React Hook`
+
+: class component에서만 이용가능했던 state와 lifecycle method를 이용할 수 있게 도와준다.
+
+⇒ 기본적으로 제공되는 훅은 use~로 시작하는 함수
+
+- State Hook : `useState()` → 함수형 컴포넌트에서도 state를 쓸 수 있도록, 일정한 데이터를 기억할 수 있게 도와줌
+- Effect Hook : `useEffect()` → lifecycle method처럼 활용할 수 있는, 원하는 데이터만 타겟으로 삼아서 그것이 변경될때마다 호출될 수 있도록 쓸 수 있음
+- 그외 `useCallback()` , `useContext`, `useMemo` , `useReducer` , `useRef` 등등 여러가지가 있다.

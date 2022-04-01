@@ -148,6 +148,14 @@ const Input = memo((props) => {
 });
 ```
 
+<br>
+→ 데이터가 자주 변경되는 큰 부모 컴포넌트에서는 memo를 사용하는 것은 의미가 없다. <br>
+
+→ 즉, props나 state의 변경사항이 빈번한 경우에는 memo를 사용하는것이 불필요하다.<br>
+
+오히려 불필요하게 캐싱을하기에 메모리 성능에 좋지않다.<br>
+<br>
+
 3. `React Hook`
 
 : class component에서만 이용가능했던 state와 lifecycle method를 이용할 수 있게 도와준다.
@@ -157,3 +165,18 @@ const Input = memo((props) => {
 - State Hook : `useState()` → 함수형 컴포넌트에서도 state를 쓸 수 있도록, 일정한 데이터를 기억할 수 있게 도와줌
 - Effect Hook : `useEffect()` → lifecycle method처럼 활용할 수 있는, 원하는 데이터만 타겟으로 삼아서 그것이 변경될때마다 호출될 수 있도록 쓸 수 있음
 - 그외 `useCallback()` , `useContext`, `useMemo` , `useReducer` , `useRef` 등등 여러가지가 있다.
+
+<br>
+<br>
+
+### ❖ 보충 `useCallback(callbackFunction, [dependency])`
+
+→ 사용시 주의할점
+
+function component같은 경우 : 해당 컴포넌트가 업데이트( state나 props의 변경 ) 될때 코드블럭 전체가 다시 실행되게 되는데, useCallback사용하게될 경우 그런 업데이트과정에서도 캐싱된 콜백함수를 그대로 쓰게 된다.<br>
+
+이렇게되면, 한번 capture된 code 블럭 안의 예전 데이터를 그대로 사용하게 된다 (업데이트되어도 동일한걸 캐시를 이용해서 쓴다!)<br>
+
+따라서 내부에 변경이되는 요소가 생긴다면 새로운 콜백을 전달해줘야하므로 dependency list를 전달해줘야한다!<br>
+
+→ 지역변수의 콜백함수가 다른 자식 컴포넌트로 전달될 때 계속해서 만들어지지 않도록 사용하게되고, 내부의 사용하는 dependency가 있다면 해당 dependency가 업데이트 될때마다 콜백을 새로 만들어주는 방향으로 사요해야한다.<br>

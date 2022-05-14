@@ -8,9 +8,19 @@ let b: string = 'string';
 let c: number[] = [1, 2, 3];
 ```
 
+### 1) any
+
+-> 어떤 type든 될 수 있다 <br>
+-> 타입을 아무것도 지정하지 않음 빈 값에는 자동으로 any라는 타입으로 지정 <br>
+-> typescript로 빠져나오고 싶을 때 사용하는 type.(type을 보호받지 못하게되므로 사용을 지양함)<br>
+
+### 2)
+
+<br><br>
+
 ## 2. Protect type powerfully
 
-### 1-1. readonly
+### 2-1. readonly
 
 Constructs a type with all properties of Type set to readonly, meaning the properties of the constructed type cannot be reassigned.
 
@@ -46,7 +56,8 @@ nums.push('3');
 **2)Tuple**
 
 => array 생성에 관련됨 <br>
-=> 배열을 구조화 시키는 것 : 최소한의 길이를 가져야하고, 특정 위치에 특정 타입이 있어야 함 등
+=> 배열을 구조화 시키는 것 : 최소한의 길이를 가져야하고, 특정 위치에 특정 타입이 있어야 함 등..<br>
+=> readonly와 같이 사용 가능
 
 ```javascript
 const player: [string, number, boolean] = [1, 'string', true];

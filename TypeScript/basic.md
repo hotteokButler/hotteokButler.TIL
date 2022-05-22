@@ -14,7 +14,43 @@ let c: number[] = [1, 2, 3];
 -> 타입을 아무것도 지정하지 않음 빈 값에는 자동으로 any라는 타입으로 지정 <br>
 -> typescript로 빠져나오고 싶을 때 사용하는 type.(type을 보호받지 못하게되므로 사용을 지양함)<br>
 
-### 2)
+### 2)unknown
+
+-> 변수의 타입을 모를때 지정 <br>
+-> 즉, 모든 값을 나타내므로 any와 비슷하지만 any보다 안전함
+
+```javascript
+let a: unknown;
+if (typeof a === 'number') {
+  let b = a + 1;
+}
+// 타입을 한번더 확인하는 과정을 거쳐야함
+```
+
+### 3)void
+
+-> 아무것도 return하지 않는 함수를 대상으로 사용 (보통 void를 따로 지정해줄 필요는 없음) <br>
+
+```javascript
+function hello() {
+  consoel.log('hello');
+}
+// function hello(): void {
+//     consoel.log('hello');
+// }
+```
+
+### 4)never
+
+->일부 함수는 절대로 값을 반환하지 않습니다.
+이는 함수가 예외를 throw하거나 프로그램 실행을 종료함을 의미 <br>
+
+```javascript
+function hello(): never {
+  throw new Error('xxx');
+}
+// retrun없이 error을 throw하는 함수 이때 never 사용
+```
 
 <br><br>
 
